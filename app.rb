@@ -7,7 +7,10 @@ get '/' do
 end
 
 get '/status' do
-  `./public/bin/Input`
+  status = `./public/bin/Input`
+  "No device" if status == 204
+  "there is no cup" if status == 40
+  "there is cup" if status == 56
 end
 
 get '/pompOn' do
