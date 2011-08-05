@@ -6,6 +6,10 @@ get '/' do
   "this is a coffee server!"
 end
 
+get '/status' do
+  `bin/Input.exe`
+end
+
 get '/on' do
   "coffee server will be start to make coffee."
 end
