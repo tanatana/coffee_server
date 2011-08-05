@@ -15,7 +15,7 @@ get '/on' do
 end
 
 get '/off' do
-  `/bin/Input.exe 0`
+  `/bin/Input.exe`
 end
 
 get '/warmUp' do
