@@ -8,9 +8,9 @@ end
 
 get '/status' do
   status = `./public/bin/Input`
-  "No device" if status == 204
-  "there is no cup" if status == 40
-  "there is cup" if status == 56
+  "No device" if status == "204"
+  "there is no cup" if status == "40"
+  "there is cup" if status == "56"
 end
 
 get '/pompOn' do
