@@ -7,7 +7,7 @@ get '/' do
 end
 
 get '/status' do
-  'dir'
+  `dir`
 end
 
 get '/on' do
