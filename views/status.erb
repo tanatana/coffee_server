@@ -1,0 +1,11 @@
+<h1>coffee server</h1>
+<h2>status</h2>
+<% status =  `./public/bin/Input` %>
+<%if status == "204" %>
+     <p>there is no device.</p>     
+<%elsif status == "40" %>
+     <p>there is no cup.</p>
+<%elsif status == "56" %>
+     <p>there is a cup, ready!</p>
+     <p><a href="/pompOn">pomp start</a></p>
+<% end %>

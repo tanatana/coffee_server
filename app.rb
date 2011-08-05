@@ -3,17 +3,14 @@ require 'rubygems'
 require 'sinatra'
 
 get '/' do
-  "this is a coffee server!"
+  erb :index
 end
 
 get '/status' do
-  status = `./public/bin/Input`
-  "No device" if status == "204"
-  "there is no cup" if status == "40"
-  "there is cup" if status == "56"
+  erb :status
 end
 
-get '/pompOn' do
+get '/pomp' do
   `./public/bin/Output 2`
   "pompOn"
 end
