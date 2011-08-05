@@ -7,8 +7,7 @@ get '/' do
 end
 
 get '/status' do
-  "print status"
-  `/bin/Input.exe`
+  'dir'
 end
 
 get '/on' do
