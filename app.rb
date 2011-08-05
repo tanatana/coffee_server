@@ -7,7 +7,7 @@ get '/' do
 end
 
 get '/status' do
-  `bin/Input.exe`
+  `/bin/Input.exe`
 end
 
 get '/on' do
