@@ -7,6 +7,7 @@ get '/' do
 end
 
 get '/status' do
+  "print status"
   `/bin/Input.exe`
 end
 
