@@ -7,22 +7,25 @@ get '/' do
 end
 
 get '/status' do
-  `dir`
-end
-
-get '/on' do
-  "coffee server will be start to make coffee."
-end
-
-get '/off' do
   `./public/bin/Input`
 end
 
+get '/pompOn' do
+  `./public/bin/Output 2`
+  "pompOn"
+end
+
+get '/powerOn' do
+  `./public/bin/Output 1`
+  "pompOn"
+end
+
+get '/off' do
+  `./public/bin/Output 0`
+  "off"
+end
+
 get '/warmUp' do
+  `./public/bin/PompStandby 2`
   "warming up..."
 end
-
-get '' do
-  ""
-end
-
